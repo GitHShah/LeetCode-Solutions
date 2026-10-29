@@ -35,12 +35,19 @@ public:
 
         for(int i = 0 ; i < m ; i++){
             for(int j = 0 ; j < n ; j++){
+                //cout << "i" << " " << i << " ";
+                //cout << "j" << " " << j << endl; 
                 if(grid[i][j]==0 && vis[i][j]==false){
+                    //cout << "cond1" << endl;
                     if(dfs(i,j,vis,grid)){
+                        //cout << "cond2"<<endl;
                         ans++;
-                    }   
+                        //cout << ans << endl;
+                    }
+                        
                 }
             }
+            cout << "---" <<endl;
         }
 
         return ans;
